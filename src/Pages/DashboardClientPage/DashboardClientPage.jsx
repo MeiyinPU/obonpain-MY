@@ -7,21 +7,25 @@ export default function DashboardClientPage() {
     <div>
       <Header />
       <h1>Dashboard client</h1>
-      <Footer />
 
       <section>
         <h2>Ma prochaine livraison</h2>
         <div>
           <div>Jour de livraison</div>
-          <div>Nomme</div>
+          <div>Nombre de pains</div>
           <div>Jour de livraison</div>
         </div>
       </section>
 
       <section>
         <h2>Mes prochaines commandes</h2>
-        <div></div>
+        <div>
+          <div>Jour de livraison</div>
+          <div>Jour de livraison</div>
+          <div>Jour de livraison</div>
+        </div>
       </section>
+      <Footer />
     </div>
   );
 }
