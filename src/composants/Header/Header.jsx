@@ -14,7 +14,7 @@ export default function Header() {
         </NavLink>
 
         <NavLink to="/mentions-légales">
-          <button>mentions</button>
+          <button>mentions Légales</button>
         </NavLink>
 
         {/*  <NavLink to="/gammespain">

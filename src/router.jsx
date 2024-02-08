@@ -1,7 +1,8 @@
 import HomePage from "./Pages/HomePage/HomePage";
 import ContactPage from "./Pages/ContactPage/ContactPage";
-import ConnexionPage from "./Pages/ConnexionPage/ConnexionPage";
+import LoginPage from "./Pages/LoginPage/LoginPage";
 import LegalNoticesPage from "./Pages/LegalNoticesPage/LegalNoticesPage";
+import DashboardClientPage from "./Pages/DashboardClientPage/DashboardClientPage";
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App.jsx";
 
@@ -15,17 +16,26 @@ export const router = createBrowserRouter([
         index: true,
         element: <HomePage />,
       },
+
+      {
+        path: "Accueil",
+        element: <HomePage />,
+      },
       {
         path: "Contact",
         element: <ContactPage />,
       },
       {
         path: "Connexion",
-        element: <ConnexionPage />,
+        element: <LoginPage />,
       },
       {
         path: "mentions-légales",
         element: <LegalNoticesPage />,
+      },
+      {
+        path: "Tableau de bord client",
+        element: <DashboardClientPage />,
       },
     ],
   },
