@@ -1,17 +1,14 @@
-import React from 'react'
-import './App.scss'
-import  PageAccueil  from './composants/PageAccueil/PageAccueil.jsx'
+import React from "react";
+import "./App.scss";
 
+import { Outlet } from "react-router";
 
 function App() {
- 
-
   return (
     <div>
-      <PageAccueil />
+      <Outlet />
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;
