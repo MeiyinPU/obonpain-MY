@@ -1,0 +1,44 @@
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('path/to/tahoma.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Tahoma', sans-serif;
+  // background-color: #F3EDC8;
+  border-color: azure;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+// .text-interit {
+//   text-decoration: inherit;
+// }
+
+// .nav-link {
+//   text-decoration: none;
+// }
+
+// .nav-link:hover {
+//   text-decoration: underline;
+// }
+
+.primary-2 {
+  color: #EAD196;
+}
+
+.primary-3 {
+  color: #BF3131;
+}
+
+.primary-4 {
+  color: #7D0A0A;
+}
+
+.object-cover {
+  object-fit: cover;
+ 
+ }

@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+@font-face {
+  font-family: 'Tahoma';
+  src: url('./styles/tahoma.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Tahoma', sans-serif;
+  background-color: #F3EDC8 ;
+}
