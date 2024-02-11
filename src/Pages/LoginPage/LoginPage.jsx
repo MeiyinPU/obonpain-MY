@@ -1,15 +1,44 @@
 import React from "react";
+import { useState } from "react";
 import Header from "../../composants/Header/Header.jsx";
 import Footer from "../../composants/Footer/Footer.jsx";
 
 
 
 export default function LoginPage() {
-  return (
 
+const [login, setLogin] = useState("");
+const [password, setPassword] = useState("");
+
+
+// const [credentials, setCredentials] = useState({
+
+//   login: 'Alice',
+//   password: 'roger'
+// })
+
+// cosnt onChange = (e)=> {
+
+// setCredentials({
+
+// ...credentials,
+// [e.target.name]:e.target.value
+// })
+
+// }
+
+
+const onSubmit = (e)=>{
+  e.preventDefault();
+  console.log(login, password);
+ }
+
+  return (
     <>
     <Header />
     <div className="border border-sucess p-6 mb-5 d-block m-auto">
+      
+      <form onSubmit={onSubmit}>
       <h3>Connexion</h3>
       <div className="d-flex flex-column align-items-end mt-5">
       
@@ -22,6 +51,8 @@ export default function LoginPage() {
             name="email"
             type="email"
             placeholder="name@example.com"
+            value={login}
+            onChange={(e)=>setLogin(e.target.value)}
           />
         </label>
       </div>
@@ -35,13 +66,15 @@ export default function LoginPage() {
             name="password"
             id="password"
             placeholder="mot de passe"
+            value={password}
+            onChange={(e)=>setPassword(e.target.value)}
           />
         </label>
       </div>
      </div>
 
       <div>
-        <button type="button" className="btn btn-primary mt-3">Connexion</button>
+        <button type="submit" className="btn btn-primary mt-3">Connexion</button>
       </div>
 
       <div className="login-input d-flex flex-column">
@@ -51,15 +84,16 @@ export default function LoginPage() {
           Se souvenir de moi
         </label>
        </div>
+      </div>
+
+     </form>
 
        <div>
         <button type="button" className="btn btn-outline-secondary mt-5"  style={{fontSize:"0.8rem"}}> Mot de passe oublié</button>
       </div>
      
-      </div>
-
       <div>
-        <button type="button" className="btn btn-primary mt-3">Créer un compte</button>
+        <p><a href="#">Créer un compte</a></p>
       </div>
     </div>
     <Footer />
