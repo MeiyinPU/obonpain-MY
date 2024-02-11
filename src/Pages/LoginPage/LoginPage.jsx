@@ -1,36 +1,43 @@
 import React from "react";
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom';
+import axios from "axios";
 import Header from "../../composants/Header/Header.jsx";
 import Footer from "../../composants/Footer/Footer.jsx";
 
 
-
 export default function LoginPage() {
 
-const [login, setLogin] = useState("");
-const [password, setPassword] = useState("");
 
+let navigate = useNavigate();
+const [credentials, setCredentials] = useState({
 
-// const [credentials, setCredentials] = useState({
+  email: 'xxxxx@example.com',
+  password: '00000'
+})
 
-//   login: 'Alice',
-//   password: 'roger'
-// })
+const onChange = (e)=> {
 
-// cosnt onChange = (e)=> {
+setCredentials({
 
-// setCredentials({
+...credentials,
+[e.target.name]:e.target.value
+})
 
-// ...credentials,
-// [e.target.name]:e.target.value
-// })
-
-// }
-
+}
 
 const onSubmit = (e)=>{
   e.preventDefault();
-  console.log(login, password);
+  console.log(credentials);
+
+axios.post('http://localhost:3000/users', credentials)
+    .then(res => {
+      console.log(res)
+      navigate('/')
+    })
+
+    .catch(error => console.log(error))
+
  }
 
   return (
@@ -51,8 +58,9 @@ const onSubmit = (e)=>{
             name="email"
             type="email"
             placeholder="name@example.com"
-            value={login}
-            onChange={(e)=>setLogin(e.target.value)}
+            value={credentials.email}
+            onChange={onChange}
+            required
           />
         </label>
       </div>
@@ -66,8 +74,9 @@ const onSubmit = (e)=>{
             name="password"
             id="password"
             placeholder="mot de passe"
-            value={password}
-            onChange={(e)=>setPassword(e.target.value)}
+            value={credentials.password}
+            onChange={onChange}
+            required
           />
         </label>
       </div>
