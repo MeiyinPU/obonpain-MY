@@ -38,6 +38,14 @@ axios.post('http://localhost:3000/users', credentials)
 
     .catch(error => console.log(error))
 
+// try GET method
+axios.get('http://localhost:3000/users?id=f55f')
+  .then(res=> {
+    console.log(res);
+    console.log(res.data);
+  })
+  .catch(error => console.log(error))
+
  }
 
   return (
