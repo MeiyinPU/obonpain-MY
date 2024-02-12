@@ -7,8 +7,8 @@ export default function ContactPage() {
   return (
     <>
     <Header />
-    <div className="d-flex justify-content-between border border-grey m-2 p-5">
-    <section className="mt-3">
+    <div className="bg-primary-1 opacity-75 d-flex justify-content-between border border-grey p-5">
+    <section className="">
     <form className="border border-white bg-white rounded-2">
     <h6>Formulaire de contact :</h6>
       <div className="input-group input-group-sm mt-2 mb-3">
@@ -28,7 +28,7 @@ export default function ContactPage() {
       </div>
 
       <div className="input-group mb-3">
-        <textarea className="form-control bg-light bg-light" aria-label="With textarea" placeholder="Votre message..."></textarea>
+        <textarea className="form-control bg-light" aria-label="With textarea" placeholder="Votre message..."></textarea>
       </div>
     </form>
     </section>

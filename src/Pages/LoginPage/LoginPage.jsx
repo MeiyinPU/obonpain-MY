@@ -51,7 +51,7 @@ axios.get('http://localhost:3000/users?id=f55f')
   return (
     <>
     <Header />
-    <form onSubmit={onSubmit} className="mt-1">
+    <form onSubmit={onSubmit} className="mt-1 opacity-75">
       <div className="border border-sucess p-6 mb-5 d-block m-auto bg-primary-1">
       <h3 style={{fontSize:"2.5rem"}}>Connexion</h3>
       <div className="d-flex flex-column mt-5">
